@@ -14,9 +14,9 @@ function Login() {
         let dark
 
         if (darkCheck){
-            dark = 'On'
+            dark = 'on'
         } else{
-            dark = 'Off'
+            dark = 'off'
         }
 
         userContext.login(name, email, phone, dark)
