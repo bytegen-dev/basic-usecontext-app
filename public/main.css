@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}
+
+.blue{
+    color: rgb(45, 45, 136);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    transition: all 0.5s ease;
+    padding: 15px 20px;
+    border-radius: 50px;
+}
+
+a:hover{
+    color: #fff;
+    transition: all 0.3s ease;
+    background-color: #444;
+}
+
+nav{
+    padding: 30px 10vw;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    width: 100%;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    background-color: blueviolet;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+button:hover{
+    padding: 15px 60px;
+    background-color: rgb(57, 52, 62);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    max-width: 500px;
+    gap: 20px;
+}
+
+input{
+    background-color: rgba(137, 43, 226, 0.367);
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+    font-family: monospace;
+    font-size: 18px;
+    transition: all 0.5s ease;
+}
+
+input:focus, input:hover{
+    background-color: rgba(137, 43, 226, 0.7);
+    transition: all 0.2s ease;
+}
+
+input::placeholder{
+    color: #fff;
+    font-size: 18px;
+    font-family: monospace;
+}
+
+form div{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    color: indigo;
+    padding: 10px 0;
+}
+
+form h3{
+    text-align: center;
+    color: rgb(68, 26, 68);
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+label{
+    font-family: monospace;
+    font-size: 18px;
+}
+
+.container{
+    background-color: transparent;    
+}
+
+.Off{
+    filter: invert(0);
+    background-color: #fff;
+    transition: all 0.5s ease;
+}
+
+.On{
+    filter: invert(10);
+    background-color: #fff;
+    transition: all 0.5s ease;
+}
+
+div{
+    transition: all 0.5s ease;
+}
