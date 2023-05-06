@@ -37,13 +37,13 @@ function App() {
           window.localStorage.setItem('userEmail', email)
           window.localStorage.setItem('userPhone', phone)
           window.localStorage.setItem('userDark', dark)
-      },
-      logout: ()=>{
-        setUserInfo((prev)=>{
-          return ({
-            ...prev,
-            ...resetState
-          })
+        },
+        logout: ()=>{
+          setUserInfo((prev)=>{
+            return ({
+              ...prev,
+              ...resetState
+            })
         })
         document.title = 'Logged Out -> Isaac Adebayo Project'
         window.localStorage.removeItem('user')
@@ -51,8 +51,27 @@ function App() {
         window.localStorage.removeItem('userEmail')
         window.localStorage.removeItem('userPhone')
         window.localStorage.removeItem('userDark')
+      },
+      toggleDarkTheme: ()=>{
+        setUserInfo((prev)=>{
+          if (prev.darkTheme === 'on'){
+            window.localStorage.setItem('userDark', 'off')
+            return ({
+              ...prev,
+              darkTheme: 'off'
+            })
+            
+          } else {
+            window.localStorage.setItem('userDark', 'on')
+            return ({
+              ...prev,
+              darkTheme: 'on'
+            })
+          }
+          
+        })
       }
-  })
+    })
 
   useLayoutEffect(()=>{
     let userPrevious
@@ -93,6 +112,10 @@ function App() {
   return (
     <LoginContext.Provider value={userInfo}>
       <div className={userInfo.darkTheme}>
+        <div className="preloader">
+          <div className="preloader-circle">
+          </div>
+        </div>
         <nav>
           <ul  style={{
           display: "flex",
