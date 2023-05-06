@@ -52,6 +52,10 @@ nav{
     z-index: 10;
 }
 
+.on nav{
+    filter: invert();
+}
+
 ul{
     width: 100%;
 }
@@ -155,13 +159,7 @@ label{
     padding: 0 10vw;
 }
 
-.Off{
-    filter: invert(0);
-    background-color: #fff;
-    transition: all 0.5s ease;
-}
-
-.on{
+.on .container{
     filter: invert(10);
     background-color: #fff;
     transition: all 0.5s ease;
@@ -184,6 +182,10 @@ div{
     align-items: center;
     /* display: none; */
     animation: hidePreloader 3s ease forwards;
+}
+
+.on .preloader{
+    filter: invert();
 }
 
 @keyframes hidePreloader {
