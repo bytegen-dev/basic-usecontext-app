@@ -57,12 +57,16 @@ ul{
 }
 
 .container{
-    height: 100vh;
+    height: 100%;
+    width: 100vw;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     animation: container-slide 1s ease forwards;
+    position: fixed;
 }
 
 @keyframes container-slide {
