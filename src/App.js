@@ -45,6 +45,7 @@ function App() {
             ...resetState
           })
         })
+        document.title = 'Logged Out -> Isaac Adebayo Project'
         window.localStorage.removeItem('user')
         window.localStorage.removeItem('userName')
         window.localStorage.removeItem('userEmail')
@@ -66,6 +67,7 @@ function App() {
     userPreviousPhone = window.localStorage.getItem('userPhone')
     userPreviousDark = window.localStorage.getItem('userDark')
     if (userPrevious == 'true'){
+      document.title = 'Logged In -> Isaac Adebayo Project'
       setUserInfo((prev)=>{
         return ({
           ...prev,
@@ -79,6 +81,7 @@ function App() {
     }
 
     else{
+      document.title = 'Logged Out -> Isaac Adebayo Project'
       window.localStorage.removeItem('user')
       window.localStorage.removeItem('userName')
       window.localStorage.removeItem('userEmail')
