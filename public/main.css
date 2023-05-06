@@ -1,7 +1,12 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
 }
 
 .red{
@@ -42,6 +47,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 
 ul{
@@ -54,6 +60,19 @@ ul{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: container-slide 1s ease forwards;
+}
+
+@keyframes container-slide {
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 button{
