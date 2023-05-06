@@ -9,6 +9,7 @@ body{
     overflow-x: hidden;
     text-align: center;
     overflow-y: hidden;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .red{
@@ -204,6 +205,10 @@ div{
         visibility: hidden;
 
     }
+}
+
+.on{
+    background-color: #000;
 }
 
 .preloader-circle{
