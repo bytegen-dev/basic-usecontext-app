@@ -1,7 +1,6 @@
-import { useReducer } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import { createContext } from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useLayoutEffect } from "react";
 import LoginContext from "./Contexts/LoginContext";
 import Home from "./Pages/Home";
@@ -85,7 +84,7 @@ function App() {
     userPreviousEmail = window.localStorage.getItem('userEmail')
     userPreviousPhone = window.localStorage.getItem('userPhone')
     userPreviousDark = window.localStorage.getItem('userDark')
-    if (userPrevious == 'true'){
+    if (userPrevious === 'true'){
       document.title = 'Logged In -> Isaac Adebayo Project'
       setUserInfo((prev)=>{
         return ({
