@@ -7,6 +7,7 @@
 body{
     font-family: sans-serif;
     overflow-x: hidden;
+    text-align: center;
 }
 
 .red{
@@ -145,7 +146,8 @@ label{
 }
 
 .container{
-    background-color: transparent;    
+    background-color: transparent;
+    padding: 0 10vw;
 }
 
 .Off{
