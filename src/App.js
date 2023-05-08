@@ -119,6 +119,10 @@ function App() {
         link.classList.remove("touching")
       })
     })
+    window.addEventListener("contextmenu", (e)=>{
+      e.preventDefault()
+      console.error('Dev has disabled this Event')
+    })
   }, [])
 
   return (
