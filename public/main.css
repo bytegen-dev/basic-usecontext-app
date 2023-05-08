@@ -177,7 +177,48 @@ div{
     justify-content: center;
     align-items: center;
     /* display: none; */
-    animation: hidePreloader 3s ease forwards;
+    animation: hidePreloader 1.5s ease forwards;
+}
+
+.reload{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    border-radius: 100%;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.reload::before{
+    content: "Reload Page";
+    position: absolute;
+    width: 200px;
+    display: flex;
+    padding: 0 40px 0 20px;
+    color: #fffd;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 100px;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.reload:hover::before{
+    opacity: 1;
+    visibility: visible;
 }
 
 .oops{

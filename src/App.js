@@ -154,6 +154,11 @@ function App() {
           <Route path="/404" element={<Oopa />} />
           <Route path="*" element={<Oopa />} />
         </Routes>
+        <div onClick={()=>{
+          window.location.reload()
+        }} className="reload">
+          🔄
+        </div>
       </div>
     </LoginContext.Provider>
   );
