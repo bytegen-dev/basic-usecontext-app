@@ -1,11 +1,12 @@
-import { Link, Route, Routes } from "react-router-dom";
-import { createContext } from "react";
+import { Link, Route, Routes} from "react-router-dom";
+import { createContext, useEffect } from "react";
 import { useState } from "react";
 import { useLayoutEffect } from "react";
 import LoginContext from "./Contexts/LoginContext";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import Logout from "./Pages/Logout";
+import Oopa from "./Pages/Oopa";
 
 function App() {
     const resetState = {
@@ -108,6 +109,18 @@ function App() {
     }
   }, [])
 
+  useEffect(()=>{
+    const links = document.querySelectorAll('a')
+    links.forEach((link)=>{
+      link.addEventListener("touchstart", ()=>{
+        link.classList.add("touching")
+      })
+      link.addEventListener("touchend", ()=>{
+        link.classList.remove("touching")
+      })
+    })
+  }, [])
+
   return (
     <LoginContext.Provider value={userInfo}>
       <div className={userInfo.darkTheme}>
@@ -138,6 +151,8 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
+          <Route path="/404" element={<Oopa />} />
+          <Route path="*" element={<Oopa />} />
         </Routes>
       </div>
     </LoginContext.Provider>

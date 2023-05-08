@@ -35,11 +35,6 @@ a{
     border-radius: 50px;
 }
 
-a:hover{
-    color: #fff;
-    transition: all 0.3s ease;
-    background-color: #444;
-}
 
 nav{
     padding: 30px 10vw;
@@ -185,6 +180,53 @@ div{
     animation: hidePreloader 3s ease forwards;
 }
 
+.oops{
+    gap: 20px;
+}
+
+.oops a{
+    background-color: #444;
+    color: #fff;
+}
+
+a{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a::before{
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: #fff4;
+    transition: all 0.7s ease;
+    transform: scale(0);
+    border-radius: 100px;
+}
+
+nav a{
+    background-color: rgb(64, 152, 224);
+    color: #fff;
+}
+
+a:hover::before{
+    transform: scale(4);
+    transition: all 0.4s ease;
+}
+
+a.touching{
+    transform: scale(1.1);
+}
+
+a.touching::before{
+    transform: scale(4) !important;
+    transition: all 0.7s ease;
+}
+
 .on .preloader{
     filter: invert();
 }
@@ -234,5 +276,15 @@ div{
 @media screen and (max-width: 400px){
     .container h2{
         font-size: 19px;
+    }
+}
+
+.touching{
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 500px) {
+    a:hover::before{
+        transform: scale(0);
     }
 }

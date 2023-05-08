@@ -30,9 +30,9 @@ function Login() {
             <div className="loggingIn">
               <form onSubmit={submitForm}>
                     <h3>LOGIN</h3>
-                  <input required type="text" placeholder='UserName' />
-                  <input required type="email" placeholder='Email' />
-                  <input required type="tel" placeholder='Phone' />
+                  <input required minLength={'5'} maxLength={'10'} type="text" placeholder='UserName' />
+                  <input required minLength={'6'} type="email" placeholder='Email' />
+                  <input required minLength={'7'} type="tel" placeholder='Phone' />
                   <div>
                   <input id='darkToggle' type="checkbox" placeholder='Phone' />
                   <label htmlFor="darkToggle">Dark Theme (default is false)</label>
